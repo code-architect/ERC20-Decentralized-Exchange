@@ -1,0 +1,19 @@
+{
+  "name": "al_erc20",
+  "version": "1.0.0",
+  "description": "codearchitect erc20 token",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "code-architect",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.21.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "@remix-project/remixd": "^0.6.27"
+  }
+}
