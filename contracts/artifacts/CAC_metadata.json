@@ -35,8 +35,67 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "buy",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getToenBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "getprice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "sell",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawTokens",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -110,11 +169,11 @@
 			]
 		},
 		"contracts/CAC.sol": {
-			"keccak256": "0xee7c49d9948c0025866219d0e44c082cc2ac5c757d4c629f6f2c1bddf1740179",
+			"keccak256": "0x600f3689352f06988607abe096a4ca83c6aafdd63ca1337a50877e417b64675c",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://474e5504e09afbcdda9dc16de61aef97cb40bc28d957533a3098d5fe5b6b05c8",
-				"dweb:/ipfs/QmY46AP3Q2S2ZcK5KMoHjaUZkB2KK6KqrWQwJKMHPg4deK"
+				"bzz-raw://8707a1db2ce20454d508f5c2a25e983da15f66408047ad59fe6f131e06210000",
+				"dweb:/ipfs/QmYpekqZTtWZ3thAZe5EPfKc98rRXG9YRmNduaZvW5EWae"
 			]
 		}
 	},

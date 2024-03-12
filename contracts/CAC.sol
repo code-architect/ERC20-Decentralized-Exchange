@@ -34,4 +34,34 @@ contract CAC
         require(sent, "failed to send");
     }
 
+    function withdrawTokens() external onlyOwner
+    {
+        uint balance = associatedToken.balanceOf(address(this));
+        associatedToken.transfer(msg.sender, balance);
+    }
+
+    function withdrawFunds() external onlyOwner
+    {
+        (bool sent,) = payable(msg.sender).call{value: address(this).balance}("");
+        require(sent, "Failed!!");
+    }
+
+    function getprice(uint numTokens) public view returns(uint)
+    {
+        return numTokens * price;
+    }
+
+    function buy(uint numTokens) external payable
+    {
+        require(numTokens <= getToenBalance(), "Not enough tokens");
+        uint tokenPrice = getprice(numTokens);
+        require(msg.value == tokenPrice, "Invalid value sent");
+
+        associatedToken.transfer(msg.sender, numTokens);
+    }
+
+    function getToenBalance() public view returns(uint)
+    {
+        return associatedToken.balanceOf(address(this));
+    }
 }
