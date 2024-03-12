@@ -24,5 +24,4 @@ npx hardhat run scripts/deploy.js
 - `getprice()` : Get the price of the tokens.
 - `buy(uint numTokens)` : The number of tokens tghe user want to buy
 - `getToenBalance()` :  can be an Internal function to check balance.
-=======
->>>>>>> 0db64449ba19549c00ea3abac4118e10ac3206e4
+
