@@ -1,6 +1,7 @@
 node_modules
 .env
-
+.idea
+artifacts/
 # Hardhat files
 /cache
 /contracts/artifacts
