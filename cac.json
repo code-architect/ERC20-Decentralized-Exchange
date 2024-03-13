@@ -1,0 +1,14 @@
+{
+  "contract": {
+    "abi": [
+      "constructor(address _token, uint256 _price)",
+      "function associatedToken() view returns (address)",
+      "function buy(uint256 numTokens) payable",
+      "function getToenBalance() view returns (uint256)",
+      "function getprice(uint256 numTokens) view returns (uint256)",
+      "function sell()",
+      "function withdrawFunds()",
+      "function withdrawTokens()"
+    ]
+  }
+}

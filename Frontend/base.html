@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CAC ERC20</title>
+</head>
+<body>
+    <div class="container">
+        <h2>General Information</h2>
+        <div class="row">
+            <div class="item">
+                <h3>Token Price: <span id="tokenPrice"></span></h3>
+                <button onclick="getPrice()">Update Price</button>
+            </div>
+
+            <div class="item">
+                <h3>Tokens Available: <span id="tokensAvailable"></span></h3>
+                <button onclick="getTokensAvailable()">Update Tokens Available</button>
+            </div>
+
+            <div class="item">
+                <h3>My Token Balance: <span id="TokenBalance"></span></h3>
+                <button onclick="getTokenBalance()">Update My Token Balance</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="item">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script
+        src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"
+></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
