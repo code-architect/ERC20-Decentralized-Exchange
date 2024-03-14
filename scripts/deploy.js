@@ -1,32 +1,34 @@
+
 const hre = require("hardhat");
 const fs = require("fs/promises");
 
 async function main() {
 
-  // const Token = await hre.ethers.deployContract("BankAccount");
-  // await Token.waitForDeployment();
-  //
-  // console.log(
-  //     `deployed to ${Token.target}`
-  // );
-  // await writeDeploymentInfo(Token);
   const Token = await hre.ethers.getContractFactory('Token');
+  // const Token = await hre.ethers.deployContract('Token');
   const token = await Token.deploy("100");
 
   const CAC = await hre.ethers.getContractFactory('CAC');
+  // const CAC = await hre.ethers.deployContract('CAC');
   const cac = await CAC.deploy(token.getAddress(), "100");
 
-  // console.log(
-  //     `deployed to ${token.target}`
-  //     `deployed to ${cac.target}`
-  // );
+  
+  console.log("Token deployment address:", token.target); 
+  console.log("CAC deployment address:", cac.target); 
+
+  await token.waitForDeployment();
+  await cac.waitForDeployment();
+    
   await writeDeploymentInfo(token, "token.json");
   await writeDeploymentInfo(cac, "cac.json");
 }
 
 async function writeDeploymentInfo(contract, filename="") {
   const data = {
+    network: hre.network.name,
     contract: {
+      address: contract.target,
+      // signerAddress: contract.signer.target,
       abi: contract.interface.format(),
     },
   };

@@ -1,5 +1,7 @@
 {
+  "network": "localhost",
   "contract": {
+    "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
     "abi": [
       "constructor(address _token, uint256 _price)",
       "function associatedToken() view returns (address)",

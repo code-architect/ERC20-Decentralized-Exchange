@@ -6,6 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CAC ERC20</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .item{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,19 +43,36 @@
             </div>
 
             <div class="item">
-                <h3>My Token Balance: <span id="TokenBalance"></span></h3>
+                <h3>My Token Balance: <span id="tokenBalance"></span></h3>
                 <button onclick="getTokenBalance()">Update My Token Balance</button>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="item">
-
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="item">
+                <h3>Grant CAC Access</h3>
+                <div>
+                    <input type="number" min="0" placeholder="Enter number of tokens" id="tokenGrant"/>
+                    <button onclick="grantAccess()">Grant</button>
                 </div>
+            </div>
+            <div class="item">
+                <h3>Sell Tokens</h3>
+                <button onclick="sell()">Sell</button>
             </div>
         </div>
     </div>
-
+    <div class="container">
+        <h2>User Controls</h2>
+        <div class="item">
+            <h3>Buy Tokens</h3>
+            <div>
+                <input type="number" min="0" placeholder="Enter number of tokens" id="tokensToBuy"/>
+                <button onclick="buyTokens()">Buy</button>
+            </div>
+        </div>
+    </div>
 
 <script
         src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
