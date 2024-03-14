@@ -42,7 +42,7 @@ async function getAccess()
 {
     if(tokenContract) return;
     await provider.send("eth_requestAccounts", []);
-    const signer = provider.getSigner();
+    signer = provider.getSigner();
     tokenContract = new ethers.Contract(tokenAddress, tokenAbi, signer);
     cacContract = new ethers.Contract(cacAddress, cacAbi, signer);    
 }
